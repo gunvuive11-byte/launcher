@@ -1,21 +1,25 @@
 <!doctype html>
-<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bộ Lạc Gà iOS</title>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bộ Lạc Gà</title>
+<link rel="apple-touch-icon" href="icon.png">
 <style>
-body{margin:0;font:16px -apple-system,system-ui,sans-serif;background:#1b2330;color:#eef2f7}
-main{max-width:520px;margin:0 auto;padding:28px 18px}
-h1{font-size:24px;margin:0 0 4px}.sub{color:#9fb0c4;margin:0 0 22px}
-a.btn{display:block;text-align:center;background:#ff8a1f;color:#fff;font-weight:700;font-size:19px;padding:16px;border-radius:14px;text-decoration:none}
-ol{padding-left:20px;line-height:1.6}li{margin-bottom:8px}b{color:#ffd27a}.note{color:#9fb0c4;font-size:14px;margin-top:22px}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{display:flex;align-items:center;justify-content:center;background:radial-gradient(120% 80% at 50% 0%,#2a3a52 0%,#121925 70%);color:#eef2f7;font:16px -apple-system,BlinkMacSystemFont,system-ui,sans-serif;padding:24px}
+main{width:100%;max-width:340px;text-align:center}
+img{width:112px;height:112px;border-radius:26px;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+h1{font-size:26px;margin:18px 0 4px;font-weight:700}
+#v{color:#8fa0b6;font-size:14px;margin:0 0 28px;min-height:1em}
+a{display:block;padding:16px;border-radius:16px;background:linear-gradient(#ffa13d,#ff7a12);color:#fff;font-weight:700;font-size:18px;text-decoration:none;box-shadow:0 6px 18px rgba(255,122,18,.35)}
+a:active{transform:scale(.98)}
+small{display:block;margin-top:22px;color:#7f90a6;font-size:12.5px;line-height:1.5}
 </style></head><body><main>
-<h1>Bộ Lạc Gà — iOS</h1>
-<p class="sub">Bản test nội bộ v26.11.18.1353 (~1,6 GB)</p>
-<a class="btn" href="itms-services://?action=download-manifest&amp;url=https://gunvuive11-byte.github.io/launcher/ios/manifest.plist">Cài đặt</a>
-<ol style="margin-top:22px">
-<li>Mở trang này bằng <b>Safari</b> (Chrome / Zalo / Facebook không cài được).</li>
-<li>Bấm <b>Cài đặt</b> → <b>Cài đặt</b>. Ra màn hình chính chờ icon tải xong (nên dùng Wi-Fi, file ~1,6 GB).</li>
-<li>Lần đầu mở: vào <b>Cài đặt → Cài đặt chung → VPN và quản lý thiết bị</b>, chọn mục <b>Chengdu Railway Bureau</b> → <b>Tin cậy</b>.</li>
-<li>iOS 16 trở lên: nếu hỏi, bật <b>Cài đặt → Quyền riêng tư và bảo mật → Chế độ nhà phát triển</b> rồi khởi động lại máy.</li>
-</ol>
-<p class="note">Bản này là app riêng, không ghi đè bản cài bằng Sideloadly (2 icon, phải đăng nhập lại).</p>
-</main></body></html>
+<img src="icon.png" alt="">
+<h1>Bộ Lạc Gà</h1>
+<p id="v"></p>
+<a href="itms-services://?action=download-manifest&amp;url=https://gunvuive11-byte.github.io/launcher/ios/manifest.plist">Cài đặt</a>
+<small>Lần đầu mở: Cài đặt › Cài đặt chung › VPN và quản lý thiết bị › Tin cậy</small>
+</main>
+<script>fetch('version.txt?'+Date.now()).then(r=>r.ok?r.text():'').then(t=>{t=t.trim();if(t)document.getElementById('v').textContent='v'+t})</script>
+</body></html>
